@@ -1,4 +1,4 @@
-# Summary Section Version Control and Branch Management (Git)
+# (3) Version Control and Branch Management (Git)
 
 #### Arvin Paundra Ardana - Golang A
 
