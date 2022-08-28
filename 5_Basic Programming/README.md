@@ -40,7 +40,7 @@ name := "Arvin Paundra Ardana"
 
 #### b. Keyword **const**
 
-Keyword const digunakan ketika hendak menyimpan sebuah nilai yang konstan atau tidak akan diubah untuk kedepannya. Pada const tidak akan bisa untuk melakukan pengubahan sebuah nilai (mutable). Berbeda dengan var, const tidak memiliki address.
+Keyword const digunakan ketika hendak menyimpan sebuah nilai yang konstan atau tidak akan diubah untuk kedepannya. Pada const tidak akan bisa untuk melakukan pengubahan sebuah nilai (immutable). Berbeda dengan var, const tidak memiliki address.
 
 Berikut cara untuk melakukan deklarasi variabel menggunakan keyword const.
 
