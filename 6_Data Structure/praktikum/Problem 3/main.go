@@ -9,12 +9,8 @@ func pairSum(arr []int, target int) []int {
 		for j := 0; j < len(arr); j++ {
 			if arr[i]+arr[j] == target {
 				arrTemp = append(arrTemp, i, j)
-				break
+				return arrTemp
 			}
-		}
-
-		if len(arrTemp) > 0 {
-			break
 		}
 	}
 
