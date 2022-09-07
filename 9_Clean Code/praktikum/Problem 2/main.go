@@ -52,8 +52,8 @@ func (m *Mobil) Berjalan() {
 	m.TambahKecepatan(10)
 }
 
-func (m *Mobil) TambahKecepatan(kecepatanBaru int) {
-	m.KecepatanPerJam = m.KecepatanPerJam + kecepatanBaru
+func (m *Mobil) TambahKecepatan(kecepatan int) {
+	m.KecepatanPerJam = m.KecepatanPerJam + kecepatan
 }
 
 func main() {
