@@ -34,8 +34,8 @@ package main
 
 type User struct {
 	ID       int
-	Username int
-	Password int
+	Username string
+	Password string
 }
 
 type UserService struct {
