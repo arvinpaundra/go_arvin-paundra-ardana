@@ -22,7 +22,7 @@ One-to-many relationship merupakan hubungan dimana sebuah data pada satu tabel b
 
 Many-to-many relationship merupakan hubungan dimana beberapa data pada sebuah tabel berhubungan dengan beberapa data pada tabel lain. Contoh implementasinya yaitu, relasi antara tabel mahasiswa dengan tabel matakuliah, diamana satu mahasiswa dapat memiliki banyak matakuliah dan 1 matakuliah dapat dimiliki oleh banyak mahasiswa.
 
-### 2. Database Definition Language (DDL)
+### 2. Data Definition Language (DDL)
 
 Database Definition Language atau DDL merupakan perintah yang digunakan oleh database untuk membuat atau memodifikasi terkait struktur pada database, seperti tabel, index, dsb.
 
@@ -85,7 +85,7 @@ Contoh :
 RENAME TABLE users TO customers;
 ```
 
-### 3. Database Manipulation Language (DML)
+### 3. Data Manipulation Language (DML)
 
 Database Manipulation Language atau DML merupakan perintah untuk mengubah atau memanipulasi data yang ada pada sebuah database.
 
