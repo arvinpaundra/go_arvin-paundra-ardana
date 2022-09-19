@@ -142,6 +142,6 @@ Total qty pada transaksi dengan id 15 berkurang menjadi 0
 
 ![img](<https://github.com/arvinpaundra/go_arvin-paundra-ardana/blob/master/13_Join%20-%20Union%20-%20Agregasi%20-%20Subquery%20-%20Function%20(DBMS)/screenshots/Screenshot_37.png>)
 
-#### 7. Buat function setelah data transaksi detail dihapus maka data total_qty terupdate berdasarkan qty data transaction id yang dihapus
+#### 8. Tampilkan data products yang tidak pernah ada di tabel transaction_details dengan subquery
 
 ![img](<https://github.com/arvinpaundra/go_arvin-paundra-ardana/blob/master/13_Join%20-%20Union%20-%20Agregasi%20-%20Subquery%20-%20Function%20(DBMS)/screenshots/Screenshot_38.png>)
