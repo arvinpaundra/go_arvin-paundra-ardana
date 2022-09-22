@@ -33,7 +33,7 @@ Contoh :
 ```
 Good :
 GET /users
-GET /user/123
+GET /users/123
 
 Bad :
 GET /getAllUsers
