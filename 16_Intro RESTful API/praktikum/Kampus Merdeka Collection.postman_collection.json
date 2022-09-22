@@ -1,0 +1,398 @@
+{
+	"info": {
+		"_postman_id": "bf1ccc30-cbcd-4cf6-98a8-89f744ba77e9",
+		"name": "Kampus Merdeka Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20002230"
+	},
+	"item": [
+		{
+			"name": "News API",
+			"item": [
+				{
+					"name": "GET Berita Premier League",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{NEWSAPI_URL}}/everything?q=premier+league",
+							"host": [
+								"{{NEWSAPI_URL}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "premier+league"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Berita Cuaca",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{NEWSAPI_URL}}/everything?q=weather",
+							"host": [
+								"{{NEWSAPI_URL}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "weather"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Berita Tentang Golang",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{NEWSAPI_URL}}/everything?q=golang+programming",
+							"host": [
+								"{{NEWSAPI_URL}}"
+							],
+							"path": [
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "golang+programming"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Berita Headlines di Indonesia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{NEWSAPI_URL}}/top-headlines?country=id&pageSize=10",
+							"host": [
+								"{{NEWSAPI_URL}}"
+							],
+							"path": [
+								"top-headlines"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "id"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Sumber Penyedia Berita di Seluruh Dunia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{NEWSAPI_URL}}/top-headlines/sources",
+							"host": [
+								"{{NEWSAPI_URL}}"
+							],
+							"path": [
+								"top-headlines",
+								"sources"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Star Wars API",
+			"item": [
+				{
+					"name": "GET Semua Karakter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SWAPI_URL}}/people",
+							"host": [
+								"{{SWAPI_URL}}"
+							],
+							"path": [
+								"people"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Karakter Berdasarkan ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SWAPI_URL}}/people/:id",
+							"host": [
+								"{{SWAPI_URL}}"
+							],
+							"path": [
+								"people",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Kendaraan berdasarkan Query Nama Kendaraan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SWAPI_URL}}/vehicles?name=sand+crawler",
+							"host": [
+								"{{SWAPI_URL}}"
+							],
+							"path": [
+								"vehicles"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "sand+crawler"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Semua Film",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SWAPI_URL}}/films",
+							"host": [
+								"{{SWAPI_URL}}"
+							],
+							"path": [
+								"films"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Film Berdasarkan ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SWAPI_URL}}/films/:id",
+							"host": [
+								"{{SWAPI_URL}}"
+							],
+							"path": [
+								"films",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rent a Book API",
+			"item": [
+				{
+					"name": "GET Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{RENTABOOK_URL}}/token",
+							"host": [
+								"{{RENTABOOK_URL}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Menambahkan Data User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 9876,\r\n    \"name\": \"Arvin Paundra Ardana\",\r\n    \"age\": 20,\r\n    \"sex\": \"male\",\r\n    \"client_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{RENTABOOK_URL}}/user",
+							"host": [
+								"{{RENTABOOK_URL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET User Berdasarkan ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{RENTABOOK_URL}}/user/:id",
+							"host": [
+								"{{RENTABOOK_URL}}"
+							],
+							"path": [
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9876"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Ubah User Berdasarkan ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 9876,\r\n    \"name\": \"Ardana Arvin Paundra\",\r\n    \"age\": 18,\r\n    \"sex\": \"male\",\r\n    \"client_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{RENTABOOK_URL}}/user/:id",
+							"host": [
+								"{{RENTABOOK_URL}}"
+							],
+							"path": [
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9876"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Menghapus User Berdasarkan ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{RENTABOOK_URL}}/user/:id",
+							"host": [
+								"{{RENTABOOK_URL}}"
+							],
+							"path": [
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "9876"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDkwMDg0NjksIm5iZiI6MTU0OTAwODQ2OSwianRpIjoiODYyMDNkMGMtZDNkOS00NGFjLWFmYjMtMjA5MjIwNWNmYmIzIiwiZXhwIjoxNTQ5MDk0ODY5LCJpZGVudGl0eSI6ImFsdGFyZXN0IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.TxuKpwggKLvLe1cv_6N0ktslk5uLT6FkwbMz3Lt2dKc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
