@@ -62,7 +62,7 @@ Screenshot hasil :
 
 ### Problem 2 - Structuring Project with Layered Architecture
 
-Link solusi [**Problem 2**]().
+Link solusi [**Problem 2**](<https://github.com/arvinpaundra/go_arvin-paundra-ardana/tree/master/18_ORM%20and%20Code%20Structure%20(MVC)/praktikum/Problem%202>).
 
 Melakukan restrukturisasi projek Problem 1 dengan menggunakan architectural pattern Model, View, Controller (MVC). Pada problem ini saya membuat struktur folder sebagi berikut.
 
