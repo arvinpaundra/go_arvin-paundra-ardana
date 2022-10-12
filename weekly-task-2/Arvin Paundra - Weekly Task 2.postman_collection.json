@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "141f8f80-7928-4d24-b016-cbb8bd5f592e",
+		"name": "Arvin Paundra - Weekly Task 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20002230"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "GET ALL CATEGORIES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW CATEGORY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Tablet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CATEGORY BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/categories/05ae56c8-1977-4558-9994-58f7f106801b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"categories",
+								"05ae56c8-1977-4558-9994-58f7f106801b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE CATEGORY BY ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Setrika\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/categories/c15d4584-9c2e-4250-9e05-028fa1424604",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"categories",
+								"c15d4584-9c2e-4250-9e05-028fa1424604"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CATEGORY BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/categories/ae61469b-440a-46f2-9d83-b43a34ecd04f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"categories",
+								"ae61469b-440a-46f2-9d83-b43a34ecd04f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Barang",
+			"item": [
+				{
+					"name": "GET ALL BARANGS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/items?keyword=",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET BARANG BY ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/items/ebd52425-e82b-41bb-a33f-9e5a49fecd67",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items",
+								"ebd52425-e82b-41bb-a33f-9e5a49fecd67"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL BARANGS BY ID KATEGORI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/items/category/74cb5441-4cf5-4796-bd2a-f146c12d7532",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items",
+								"category",
+								"74cb5441-4cf5-4796-bd2a-f146c12d7532"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW BARANG",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\": \"Samsung Ericson 3X\",\r\n    \"deskripsi\": \"This phone will beat even Iphone 20\",\r\n    \"jumlah_stok\": 50,\r\n    \"harga\": 5000000,\r\n    \"id_kategori\": \"74cb5441-4cf5-4796-bd2a-f146c12d7532\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/items",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE DATA BARANG",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\": \"Iphone Pro Max Ultimate 20 Gen. 2\",\r\n    \"deskripsi\": \"Update Iphone 20 to Gen. 2\",\r\n    \"jumlah_stok\": 200,\r\n    \"harga\": 18000000,\r\n    \"id_kategori\": \"74cb5441-4cf5-4796-bd2a-f146c12d7532\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/items/4c82e1fb-0848-481f-b726-60651592b568",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items",
+								"4c82e1fb-0848-481f-b726-60651592b568"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE BARANG BY ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/items/ebd52425-e82b-41bb-a33f-9e5a49fecd67",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items",
+								"ebd52425-e82b-41bb-a33f-9e5a49fecd67"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
