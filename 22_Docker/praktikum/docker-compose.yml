@@ -1,0 +1,46 @@
+version: '2.1'
+
+services:
+  db_mysql:
+    image: 'mysql:8.0.31'
+    container_name: 'clean-arch-db'
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql-volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_DATABASE: 'crud_go'
+    healthcheck:
+      test: ['CMD', 'mysql', '-u', 'root', '-proot', '-e', 'show schemas']
+      interval: 5s
+      retries: 3
+    networks:
+      - clean-net
+
+  rest_api:
+    image: 'arvinpaundra/clean-arch:1.2'
+    container_name: 'clean-arch'
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./.env:/.env
+    env_file:
+      - /.env
+    environment:
+      DBAddress: 'db_mysql:3306'
+      JWTSecret: 'secret'
+      APIPort: ':8080'
+    restart: on-failure
+    depends_on:
+      db_mysql:
+        condition: service_healthy
+    networks:
+      - clean-net
+
+volumes:
+  mysql-volume:
+
+networks:
+  clean-net:
+    driver: bridge
