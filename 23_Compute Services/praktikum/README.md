@@ -52,6 +52,8 @@
 
 ### Pointing Domain
 
+Link [service](http://ec2-18-142-242-25.ap-southeast-1.compute.amazonaws.com/)
+
 - Masuk ke VM ec2 via SSH. Lalu setup untuk install docker dengan perintah berikut.
 
 ```
