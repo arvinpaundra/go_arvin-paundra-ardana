@@ -1,0 +1,50 @@
+name: Run Continuous Deployment Golang App
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: 'Run automation deploy to EC2 AWS'
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-go@v3
+        with:
+          go-version: 1.18
+
+      - name: Setup QEMU
+        uses: docker/setup-qemu-action@v2
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and Push to Docker Hub
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: arvinpaundra/clean-arch:latest
+
+      - name: Login to EC2 instance via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ec2-54-169-239-103.ap-southeast-1.compute.amazonaws.com
+          username: ubuntu
+          key: ${{ secrets.KEY }}
+          port: 22
+          script: |
+            sudo docker stop go-app
+            sudo docker container rm go-app
+            sudo docker image rm arvinpaundra/clean-arch:latest
+            sudo docker pull arvinpaundra/clean-arch:latest
+            cd clean-arch
+            sudo docker run -d --name go-app -p 80:8080 -v $PWD/.env:/.env arvinpaundra/clean-arch:latest
